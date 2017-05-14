@@ -9,6 +9,7 @@
 
   <modules>
     <module>hello-wildfly-rest</module>
+    <module>custom-login-module</module>
   </modules>
 
 

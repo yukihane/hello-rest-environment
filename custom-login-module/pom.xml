@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<project
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+  xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>jp.himeji-cs.hello-rest-environment</groupId>
+    <artifactId>hello-rest-environment</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+  </parent>
+  <groupId>jp.himeji-cs.wildfly.custom-login-module</groupId>
+  <artifactId>custom-login-module</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+  <name>A project based on java8maven</name>
+  <properties>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.picketbox</groupId>
+      <artifactId>picketbox</artifactId>
+      <version>4.9.6.Final</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.5.0</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>java</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <mainClass>jp.himeji_cs.wildfly.custom_loginmodule.App</mainClass>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
