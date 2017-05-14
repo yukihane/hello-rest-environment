@@ -19,15 +19,28 @@ package jp.himeji_cs.hello_wildfly_rest.rest;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
+import io.swagger.jaxrs.config.BeanConfig;
+
 /**
- * A class extending {@link Application} and annotated with @ApplicationPath is the Java EE 7 "no XML" approach to activating
- * JAX-RS.
+ * A class extending {@link Application} and annotated with @ApplicationPath is
+ * the Java EE 7 "no XML" approach to activating JAX-RS.
  * 
  * <p>
- * Resources are served relative to the servlet path specified in the {@link ApplicationPath} annotation.
+ * Resources are served relative to the servlet path specified in the
+ * {@link ApplicationPath} annotation.
  * </p>
  */
 @ApplicationPath("/rest")
 public class JaxRsActivator extends Application {
-    /* class body intentionally left blank */
+
+    public JaxRsActivator() {
+        BeanConfig beanConfig = new BeanConfig();
+        beanConfig.setVersion("0.1.0");
+        beanConfig.setSchemes(new String[] { "http" });
+        beanConfig.setHost("localhost:8080");
+        beanConfig.setBasePath("/hello-wildfly-rest/rest");
+        beanConfig.setResourcePackage("jp.himeji_cs.hello_wildfly_rest.rest");
+        beanConfig.setPrettyPrint(true);
+        beanConfig.setScan(true);
+    }
 }

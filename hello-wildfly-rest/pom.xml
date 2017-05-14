@@ -87,6 +87,19 @@
   </dependencyManagement>
 
   <dependencies>
+    <dependency>
+      <groupId>io.swagger</groupId>
+      <artifactId>swagger-jaxrs</artifactId>
+      <version>1.5.13</version>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+      <scope>provided</scope>
+    </dependency>
+
     <!-- First declare the APIs we depend on and need for compilation. All 
       of them are provided by JBoss WildFly -->
 
