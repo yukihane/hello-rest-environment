@@ -17,7 +17,7 @@
 package jp.himeji_cs.hello_wildfly_rest.service;
 
 import jp.himeji_cs.hello_wildfly_rest.model.Member;
-
+import javax.annotation.security.PermitAll;
 import javax.ejb.Stateless;
 import javax.enterprise.event.Event;
 import javax.inject.Inject;
@@ -37,6 +37,7 @@ public class MemberRegistration {
     @Inject
     private Event<Member> memberEventSrc;
 
+    @PermitAll
     public void register(Member member) throws Exception {
         log.info("Registering " + member.getName());
         em.persist(member);

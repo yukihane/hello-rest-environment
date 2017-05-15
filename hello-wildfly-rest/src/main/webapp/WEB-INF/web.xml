@@ -15,6 +15,7 @@
     <web-resource-collection>
       <web-resource-name>non-protected-page</web-resource-name>
       <description>認証不要リソース</description>
+      <url-pattern>/rest/ejb/*</url-pattern>
       <url-pattern>/rest/members/*</url-pattern>
       <url-pattern>/rest/swagger.json</url-pattern>
     </web-resource-collection>
