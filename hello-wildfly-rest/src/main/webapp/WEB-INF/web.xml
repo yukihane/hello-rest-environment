@@ -16,7 +16,7 @@
       <web-resource-name>non-protected-page</web-resource-name>
       <description>認証不要リソース</description>
       <url-pattern>/rest/ejb/*</url-pattern>
-      <url-pattern>/rest/members/*</url-pattern>
+      <url-pattern>/rest/login/*</url-pattern>
       <url-pattern>/rest/swagger.json</url-pattern>
     </web-resource-collection>
   </security-constraint>
@@ -36,8 +36,11 @@
     <auth-method>FORM</auth-method>
     <realm-name>own-domain</realm-name>
     <form-login-config>
-      <form-login-page>/rest/members/</form-login-page>
-      <form-error-page>/rest/members/</form-error-page>
+      <form-login-page>/rest/login/</form-login-page>
+      <form-error-page>/rest/login/</form-error-page>
     </form-login-config>
   </login-config>
+  <security-role>
+    <role-name>user</role-name>
+  </security-role>
 </web-app>
