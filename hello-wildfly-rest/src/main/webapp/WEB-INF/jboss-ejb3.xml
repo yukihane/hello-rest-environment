@@ -8,28 +8,26 @@
       <ejb-name>*</ejb-name>
       <s:security-domain>own-domain</s:security-domain>
     </s:security>
-<!--
     <method-permission>
       <unchecked />
       <method>
-        <ejb-name>MemberRegistration</ejb-name>
-        <method-name>*</method-name>
+        <ejb-name>MyNonSecureEjb</ejb-name>
+        <method-name>getText</method-name>
       </method>
     </method-permission>
     <method-permission>
       <unchecked />
       <method>
-        <ejb-name>MyNonSecureEjb</ejb-name>
-        <method-name>*</method-name>
+        <ejb-name>MemberRegistration</ejb-name>
+        <method-name>register</method-name>
       </method>
     </method-permission>
     <method-permission>
       <role-name>user</role-name>
       <method>
-        <ejb-name>MyEjb</ejb-name>
+        <ejb-name>*</ejb-name>
         <method-name>*</method-name>
       </method>
     </method-permission>
--->
   </assembly-descriptor>
 </jboss:ejb-jar>
