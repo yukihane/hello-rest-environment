@@ -17,6 +17,7 @@
       <description>認証不要リソース</description>
       <url-pattern>/rest/ejb/*</url-pattern>
       <url-pattern>/rest/login/*</url-pattern>
+      <url-pattern>/rest/logout/*</url-pattern>
       <url-pattern>/rest/swagger.json</url-pattern>
     </web-resource-collection>
   </security-constraint>
