@@ -9,7 +9,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import jp.himeji_cs.hello_wildfly_rest.ejb.MyEjbService.MyEjbLocal;
-import jp.himeji_cs.hello_wildfly_rest.ejb.MyNonSecureEjbLocal;
+import jp.himeji_cs.hello_wildfly_rest.ejb.MyNonSecureEjbService.MyNonSecureEjbLocal;
 
 @Path("/ejb")
 @Produces(MediaType.APPLICATION_JSON)
