@@ -8,7 +8,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import jp.himeji_cs.hello_wildfly_rest.ejb.MyEjbLocal;
+import jp.himeji_cs.hello_wildfly_rest.ejb.MyEjbService.MyEjbLocal;
 import jp.himeji_cs.hello_wildfly_rest.ejb.MyNonSecureEjbLocal;
 
 @Path("/ejb")
