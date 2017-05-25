@@ -11,6 +11,7 @@
     <module>hello-wildfly-rest</module>
     <module>custom-login-module</module>
     <module>ejb-if</module>
+    <module>remote-ejb-client</module>
   </modules>
 
 
